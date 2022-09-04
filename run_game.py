@@ -22,9 +22,9 @@ ground = Entity(model='cube', scale=(200,1,200), y=-4, texture='assets/ground.pn
 
 def build_base():
     #wall = Entity(model='cube', scale=(5,5,1), position=(10,-1,10), texture='assets/wall.png', collider='box')
-    starter_wall1 = Entity(model='cube', scale=(20,5,1), position=(90,-1,-100), texture='assets/wall.png', collider='box')
+    starter_wall1 = Entity(model='cube', scale=(20,5,1), position=(90,-1,-100), texture='assets/wall4.png', collider='box')
     starter_wall2 = Entity(model='cube', scale=(1,5,20), position=(100,-1,-90), texture='assets/wall2.png', collider='box')
-    starter_wall3 = Entity(model='cube', scale=(15,5,1), position=(92,-1,-80), texture='assets/wall.png', collider='box')
+    starter_wall3 = Entity(model='cube', scale=(15,5,1), position=(92,-1,-80), texture='assets/wall3.png', collider='box')
     starter_wall4 = Entity(model='cube', scale=(1,5,20), position=(80,-1,-90), texture='assets/wall.png', collider='box')
     hallway_spawn_main_wall1 = Entity(model='cube', scale=(1,5,10), position=(85,-1,-74.5), texture='assets/wall.png', collider='box')
     hallway_spawn_main_wall2 = Entity(model='cube', scale=(1,5,10), position=(80,-1,-74.5), texture='assets/wall2.png', collider='box')
