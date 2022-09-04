@@ -18,7 +18,7 @@ def input(key):
 player = FirstPersonController(speed=20, y=3, position=Vec3(90, -3.5, -90))
 
 #Ground
-ground = Entity(model='cube', scale=(200,1,200), y=-4, texture='assets/ground2.png', collider='box')
+ground = Entity(model='cube', scale=(200,1,200), y=-4, texture='assets/ground.png', collider='box')
 
 def build_base():
     #wall = Entity(model='cube', scale=(5,5,1), position=(10,-1,10), texture='assets/wall.png', collider='box')
@@ -32,7 +32,9 @@ def build_base():
     wall8 = Entity(model='cube', scale=(11,5,1), position=(75,-1,-80), texture='assets/wall2.png', collider='box')
     wall9 = Entity(model='cube', scale=(1,5,11), position=(70,-1,-91), texture='assets/wall.png', collider='box')
     wall10 = Entity(model='cube', scale=(20,5,1), position=(59.5,-1,-97), texture='assets/wall4.png', collider='box')
-    wall12 = Entity(model='cube', scale=(1,5,10), position=(70,-1,-74.5), texture='assets/wall2.png', collider='box')
+    wall11 = Entity(model='cube', scale=(1,5,20), position=(50,-1,-86.5), texture='assets/wall2.png', collider='box')
+    wall12 = Entity(model='cube', scale=(20,5,1), position=(59.5,-1,-70), texture='assets/wall4.png', collider='box')
+    wall13 = Entity(model='cube', scale=(1,5,10), position=(70,-1,-74.5), texture='assets/wall2.png', collider='box')
 build_base()
 
 basetemplate = Entity(model='quad', scale=2, position=(5,-1,5), texture='assets/basetemplate.png')
