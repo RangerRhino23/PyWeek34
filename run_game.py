@@ -6,6 +6,7 @@ Sky(texture='assets/sky.png')
 
 
 def update():
+    camera.fov = 90
     camera.y = 0
     player.speed = 15
     if held_keys['r']:
@@ -13,6 +14,8 @@ def update():
     if held_keys['left shift']:
         camera.y = -0.25
         player.speed = 10
+    if held_keys['c']:
+        camera.fov = 60
 
 def input(key):
     if key == 'q':
