@@ -19,6 +19,8 @@ def input(key):
         quit()
     if key == 'g':
         EditorCamera()
+    if key == 'f':
+        print(player.position)
 
 #Player
 player = FirstPersonController(speed=20, y=3, position=Vec3(90, -3.5, -90))
