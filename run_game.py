@@ -1,16 +1,19 @@
+#Imports Ursina Engine
 from ursina import *
 from ursina.prefabs.first_person_controller import FirstPersonController
 app = Ursina()
 
 Sky(texture='assets/sky.png')
 
-#variables
+#Variables
 onrover = False
 
+#Game Loop
 def update():
     camera.fov = 90
     camera.y = 0
     player.speed = 15
+    #Sprint, Crouch, Zoom
     if held_keys['r']:
         player.speed = 20
     if held_keys['left shift']:
@@ -35,13 +38,12 @@ def update():
     if onrover == False:
         player.gravity = 1
 
+
+#Keyboard Dectection
 def input(key):
     if key == 'q':
         quit()
-    if key == 'g':
-        EditorCamera()
-    if key == 'f':
-        print(player.position)
+    #Garage Door Opener
     if garage_door.hovered:
         if key == 'left mouse down':
             garage_door.y = 6
@@ -55,6 +57,11 @@ def input(key):
             player.x += 4
         elif onrover == False:
             onrover = True
+    #-----TESTING-----#
+    if key == 'g':
+        EditorCamera()
+    if key == 'f':
+        print(player.position)
 
 #Player
 player = FirstPersonController(speed=15, y=3, position=Vec3(90, -3.5, -90))
@@ -62,6 +69,8 @@ player = FirstPersonController(speed=15, y=3, position=Vec3(90, -3.5, -90))
 #Ground
 ground = Entity(model='cube', scale=(200,1,200), y=-4, texture='assets/ground.png', collider='box')
 
+
+#Base Builder
 def build_base_walls():
     wall1 = Entity(model='cube', scale=(20,5,1), position=(90,-1,-100), texture='assets/wall4.png', collider='box')
     wall2 = Entity(model='cube', scale=(1,5,20), position=(100,-1,-90), texture='assets/wall2.png', collider='box')
@@ -90,9 +99,13 @@ def build_base_walls():
 build_base_walls()
 
 
-
+#Rover Room Garage Door
 garage_door = Button(color=color.white, model='cube', texture='assets/garage.png', position=(19,1.5,-68), scale=(1,5,18), parent=scene, origin_y=0.5)
 
+
+#Rover
 rover = Entity(model='assets/models/rover.glb', scale=(13), position=(28,-0.5,-83), rotation_y=180, collider='box')
 
+
+#Runs the game
 app.run()
