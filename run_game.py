@@ -104,7 +104,7 @@ garage_door = Button(color=color.white, model='cube', texture='assets/garage.png
 
 
 #Rover
-rover = Entity(model='assets/models/rover.glb', scale=(13), position=(28,-0.5,-83), rotation_y=180, collider='box')
+rover = Entity(model='assets/models/rover.glb', scale=(13), position=(28,-1,-83), rotation_y=180, collider='box')
 
 
 #Runs the game
