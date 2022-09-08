@@ -21,7 +21,7 @@
             ],
             "size": [
               200,
-              200
+              248
             ],
             "text": "To-Do:\n 1. Fix Rover Bugs\n 2. Add floor to base\n 3. Add options menu on start_screen.py\n ",
             "rotation": 0,
