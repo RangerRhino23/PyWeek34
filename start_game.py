@@ -11,7 +11,7 @@ def input(key):
         quit()
 
 def run_game():
-    os.startfile('run_game.py')
+    os.startfile('game.py')
     app.closeWindow()
 
 def quit_game():
